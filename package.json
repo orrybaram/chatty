@@ -1,0 +1,25 @@
+{
+  "name": "chatty",
+  "version": "0.0.0",
+  "description": "A very simple chat client",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orrybaram/chatty.git"
+  },
+  "keywords": [
+    "chat",
+    "chatty",
+    "messaging",
+    "message"
+  ],
+  "author": "Orry Baram",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/orrybaram/chatty/issues"
+  },
+  "homepage": "https://github.com/orrybaram/chatty#readme"
+}
