@@ -1,11 +1,11 @@
 import {observable, action} from 'mobx';
 
 export default class ChatStore {
-  constructor(id, user) {
-    this.id = id;
-    this.user = user;
-  }
-
-  @observable receivers = [];
+  @observable users = [];
   @observable messages = [];
+
+  constructor(id, users) {
+    this.id = id;
+    this.users = users;
+  }
 }
