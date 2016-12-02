@@ -40,6 +40,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "jest": "^17.0.3",
+    "jest-css-modules": "^1.1.0",
     "miclint": "^2.0.0",
     "postcss-loader": "^1.1.1",
     "precss": "^1.4.0",
@@ -79,6 +80,7 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
-    }
+    },
+    "transform": "<rootDir>/node_modules/jest-css-modules"
   }
 }
