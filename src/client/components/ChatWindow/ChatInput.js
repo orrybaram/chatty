@@ -2,14 +2,24 @@ import React, { PropTypes } from 'react';
 import { observer } from 'mobx-react';
 
 const propTypes = {
-  prop: PropTypes.object
+  sendMessage: PropTypes.func,
+  inputValue: PropTypes.string,
+  updateInput: PropTypes.func
 };
 
-const ChatInput = (props) => {
+const ChatInput = ({ sendMessage, updateInput, inputValue }) => {
+  function onSubmit(e) {
+    e.preventDefault();
+    sendMessage();
+  }
+
   return (
-    <input placeholder='Send Message' />
+    <form onSubmit={onSubmit}>
+      <input value={inputValue} placeholder='Send Message' onChange={updateInput} />
+      <button>Send</button>
+    </form>
   );
-}
+};
 
 ChatInput.propTypes = propTypes;
 export default observer(ChatInput);
