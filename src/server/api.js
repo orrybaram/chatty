@@ -8,11 +8,11 @@ export const getChatMessages = () => {
     return JSON.parse(messages);
   }
   return [];
-}
+};
 
 export const getChatMessagesById = (id) => {
   const messages = getChatMessages();
-  return messages[id];
+  return messages.filter(({ id: messageId }) => id === messageId)[0];
 };
 
 export const saveChatMessages = ({ id, messages }) => {
