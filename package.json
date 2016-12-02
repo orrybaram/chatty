@@ -5,7 +5,8 @@
   "main": "src/server/index.js",
   "scripts": {
     "test": "jest",
-    "start": "babel-node src/server/index.js"
+    "start": "babel-node src/server/index.js",
+    "lint": "miclint | snazzy"
   },
   "repository": {
     "type": "git",
