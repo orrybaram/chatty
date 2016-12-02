@@ -1,0 +1,11 @@
+exports[`App renders correctly 1`] = `
+<div
+  className="app">
+  <div>
+    Im a chat window
+  </div>
+  <div>
+    Im a chat window
+  </div>
+</div>
+`;
