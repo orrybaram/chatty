@@ -14,7 +14,8 @@ export default class ChatStore {
   @action sendMessage() {
     const message = {
       body: this.inputValue,
-      dateCreated: new Date()
+      dateCreated: new Date(),
+      sentBy: this.user
     };
     this.messages.push(message);
     this.inputValue = '';
