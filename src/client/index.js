@@ -11,6 +11,7 @@ render(
   document.getElementById('root')
 );
 
+/* istanbul ignore next */
 if (module.hot) {
   module.hot.accept('./components/App', () => {
     const NextApp = require('./components/App').default; // eslint-disable-line

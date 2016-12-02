@@ -1,10 +1,11 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const precss = require('precss');
-const autoprefixer = require('autoprefixer');
-const nestedCss = require('postcss-nested');
-const cssCustomProperties = require('postcss-custom-properties');
+/* eslint-disable import/no-extraneous-dependencies*/
+import path from 'path';
+import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import precss from 'precss';
+import autoprefixer from 'autoprefixer';
+import nestedCss from 'postcss-nested';
+import cssCustomProperties from 'postcss-custom-properties';
 
 module.exports = {
   entry: [
@@ -38,7 +39,7 @@ module.exports = {
       }
     ]
   },
-  postcss: function() {
-    return [precss, autoprefixer, nestedCss, cssCustomProperties];
-  }
+  postcss: () => (
+    [precss, autoprefixer, nestedCss, cssCustomProperties]
+  )
 };
