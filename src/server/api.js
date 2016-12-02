@@ -20,6 +20,12 @@ export const saveChatMessages = ({ id, messages }) => {
     throw new Error('Error: Invalid message structure');
   }
   const messageStorage = getChatMessages();
+  const overwriteIndex = messageStorage.findIndex(x => x.id === id);
+
+  if (overwriteIndex > -1) {
+    messageStorage.splice(overwriteIndex, 1);
+  }
+
   messageStorage.push({ id, messages });
   localStorage.setItem('ChatMessages', JSON.stringify(messageStorage));
   return { status: 200 };

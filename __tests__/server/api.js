@@ -35,6 +35,22 @@ describe('saveChatMessages', () => {
   });
   it('returns with a 200 if saved', () => {
     expect(saveChatMessages(mockChatMessage)).toEqual({ status: 200 });
+    const chat = getChatMessagesById(0);
+    expect(chat.messages.length).toBe(2);
+  });
+  it('overwrites an entry with the same id', () => {
+    const newMessage = Object.assign({}, mockChatMessage);
+    newMessage.messages.push({
+      body: 'Nada',
+      dateCreated: '12/2/2016',
+      sentBy: {
+        name: 'Bags'
+      }
+    });
+
+    saveChatMessages(newMessage);
+    const chat = getChatMessagesById(0);
+    expect(chat.messages.length).toBe(3);
   });
 });
 
@@ -42,7 +58,7 @@ describe('getChatMessagesById', () => {
   it('returns chat history by id', () => {
     const chatHistory = getChatMessagesById(0);
     expect(chatHistory.id).toBe(0);
-    expect(chatHistory.messages.length).toBe(2);
+    expect(chatHistory.messages.length).toBe(3);
   });
 
   it('returns undefined if not found', () => {
