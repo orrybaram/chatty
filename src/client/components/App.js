@@ -25,6 +25,14 @@ class App extends Component {
           updateInput={this.updateInput}
           inputValue={this.chat.inputValue}
         />
+        <ChatWindow
+          user={this.chat.users}
+          messages={this.chat.messages}
+          recipients={this.chat.users}
+          sendMessage={this.sendMessage}
+          updateInput={this.updateInput}
+          inputValue={this.chat.inputValue}
+        />
       </div>
     );
   }

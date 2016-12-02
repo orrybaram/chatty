@@ -10,11 +10,10 @@ export default class ChatStore {
     this.user = user;
   }
 
-  @action sendMessage(body, sentBy) {
+  @action sendMessage(body) {
     const message = {
       body: this.inputValue,
-      dateCreated: new Date(),
-      sentBy
+      dateCreated: new Date()
     };
     this.messages.push(message);
     this.inputValue = '';

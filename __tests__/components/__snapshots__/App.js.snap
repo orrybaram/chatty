@@ -1,11 +1,41 @@
 exports[`App renders correctly 1`] = `
 <div
   className="app">
-  <div>
-    Im a chat window
+  <div
+    className="chat-window">
+    <div>
+      Im a Header look at me!
+    </div>
+    <div
+      className="chat-window__messages" />
+    <form
+      onSubmit={[Function]}>
+      <input
+        onChange={[Function]}
+        placeholder="Send Message"
+        value="" />
+      <button>
+        Send
+      </button>
+    </form>
   </div>
-  <div>
-    Im a chat window
+  <div
+    className="chat-window">
+    <div>
+      Im a Header look at me!
+    </div>
+    <div
+      className="chat-window__messages" />
+    <form
+      onSubmit={[Function]}>
+      <input
+        onChange={[Function]}
+        placeholder="Send Message"
+        value="" />
+      <button>
+        Send
+      </button>
+    </form>
   </div>
 </div>
 `;
