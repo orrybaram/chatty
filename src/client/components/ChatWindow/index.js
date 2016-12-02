@@ -1,14 +1,14 @@
-import React, { Component, PropTypes } from 'react';
-import { observer } from 'mobx-react';
+import React, { Component } from 'react';
+import { observer, PropTypes } from 'mobx-react';
 import ChatHeader from './ChatHeader';
 import ChatMessages from './ChatMessages';
 import ChatInput from './ChatInput';
 import ChatStore from '../../../shared/stores/ChatStore';
 
 const propTypes = {
-  user: PropTypes.object,
-  recipients: PropTypes.array,
-  messages: PropTypes.array
+  user: PropTypes.objectOrObservableObject,
+  recipients: PropTypes.arrayOrObservableArray,
+  messages: PropTypes.arrayOrObservableArray
 };
 
 @observer

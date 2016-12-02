@@ -14,7 +14,6 @@ class ChatMessage extends Component {
     }, 1000);
   }
   render() {
-    console.log('render');
     const { message } = this.props;
     return (
       <div className='chat-window__messages__message'>
@@ -24,7 +23,7 @@ class ChatMessage extends Component {
       </div>
     );
   }
-};
+}
 
 ChatMessage.propTypes = propTypes;
 export default ChatMessage;

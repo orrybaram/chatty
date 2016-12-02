@@ -1,9 +1,9 @@
-import React, { PropTypes } from 'react';
-import { observer } from 'mobx-react';
+import React from 'react';
+import { observer, PropTypes } from 'mobx-react';
 import ChatMessage from './ChatMessage';
 
 const propTypes = {
-  messages: PropTypes.array
+  messages: PropTypes.arrayOrObservableArray
 };
 
 const ChatMessages = ({ messages }) => {

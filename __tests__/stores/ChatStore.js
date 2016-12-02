@@ -1,7 +1,7 @@
 import ChatStore from '../../src/shared/stores/ChatStore';
 
 describe('ChatStore', () => {
-  const chat = new ChatStore();
+  const chat = new ChatStore({}, [], []);
   describe('sendMessage', () => {
     it('updates the messages array and clears input', () => {
       chat.inputValue = 'beep boop';

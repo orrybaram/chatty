@@ -9,7 +9,6 @@ const propTypes = {
 @observer
 class App extends Component {
   render() {
-    console.log(this.props.stores);
     return (
       <div className='app'>
         <ChatWindow
