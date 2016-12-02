@@ -11,8 +11,8 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <ChatWindow />
-        <ChatWindow />
+        <ChatWindow user={{}} messages={[]} recipients={[]} />
+        <ChatWindow user={{}} messages={[]} recipients={[]} />
       </div>
     );
   }

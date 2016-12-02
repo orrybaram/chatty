@@ -3,7 +3,7 @@ describe('init', () => {
   rootEl.id = 'root';
   document.body.appendChild(rootEl);
 
-  require('../../src/client/');
+  require('../../src/client/'); // eslint-disable-line
 
   it('should render the app to the page', () => {
     const app = document.querySelector('.app');

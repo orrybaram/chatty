@@ -1,5 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { observer } from 'mobx-react';
+import ChatHeader from './ChatHeader';
+import ChatMessages from './ChatMessages';
+import ChatInput from './ChatInput';
 
 const propTypes = {
   user: PropTypes.object,
@@ -11,8 +14,12 @@ const propTypes = {
 class ChatWindow extends Component {
   render() {
     return (
-      <div>Im a chat window</div>
-    )
+      <div className='chat-window'>
+        <ChatHeader />
+        <ChatMessages messages={this.props.messages} />
+        <ChatInput />
+      </div>
+    );
   }
 }
 
