@@ -7,7 +7,6 @@ const nestedCss = require('postcss-nested');
 const cssCustomProperties = require('postcss-custom-properties');
 
 module.exports = {
-  devtool: 'eval',
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
