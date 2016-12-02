@@ -1,7 +1,7 @@
-import ChatStore from './ChatStore';
+import MessageStore from './MessageStore';
 import UIStore from './UIStore';
 
 export default {
-  chat: new ChatStore(),
+  message: new MessageStore(),
   ui: new UIStore()
 };

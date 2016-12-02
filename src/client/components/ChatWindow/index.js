@@ -15,7 +15,8 @@ const propTypes = {
 class ChatWindow extends Component {
   constructor(props) {
     super(props);
-    this.chat = new ChatStore(this.props.user, this.props.recipients, this.props.messages);
+    const { user, recipients, messages } = props;
+    this.chat = new ChatStore(user, recipients, messages);
     this.sendMessage = this.chat.sendMessage.bind(this.chat);
     this.updateInput = this.chat.updateInput.bind(this.chat);
   }

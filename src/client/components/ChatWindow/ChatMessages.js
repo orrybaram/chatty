@@ -7,7 +7,7 @@ const propTypes = {
 };
 
 const ChatMessages = ({ messages }) => {
-  const messageEls = messages.map(msg => <ChatMessage message={msg} />);
+  const messageEls = messages.map((msg, i) => <ChatMessage key={i} message={msg} />);
   return (
     <div className='chat-window__messages'>
       { messageEls }

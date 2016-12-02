@@ -5,10 +5,10 @@ export default class ChatStore {
   @observable messages = [];
   @observable inputValue = '';
 
-  constructor(id, user, recipients) {
-    this.id = id;
+  constructor(user, recipients, messages) {
     this.user = user;
     this.recipients = recipients;
+    this.messages = messages;
   }
 
   @action sendMessage() {
