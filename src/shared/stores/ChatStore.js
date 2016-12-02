@@ -5,12 +5,13 @@ export default class ChatStore {
   @observable messages = [];
   @observable inputValue = '';
 
-  constructor(id, user) {
+  constructor(id, user, recipients) {
     this.id = id;
     this.user = user;
+    this.recipients = recipients;
   }
 
-  @action sendMessage(body) {
+  @action sendMessage() {
     const message = {
       body: this.inputValue,
       dateCreated: new Date()
@@ -20,7 +21,6 @@ export default class ChatStore {
   }
 
   @action updateInput(e) {
-    console.log(e.target.value);
     this.inputValue = e.target.value;
   }
 }
