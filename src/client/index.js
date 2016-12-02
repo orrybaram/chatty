@@ -1,25 +1,23 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import AppState from './AppState';
-import App from './App';
-
-const appState = new AppState();
+import stores from '../shared/stores';
+import App from './components/App';
 
 render(
   <AppContainer>
-    <App appState={appState} />
+    <App stores={stores} />
   </AppContainer>,
   document.getElementById('root')
 );
 
 if (module.hot) {
-  module.hot.accept('./App', () => {
-    const NextApp = require('./App').default; // eslint-disable-line
+  module.hot.accept('./components/App', () => {
+    const NextApp = require('./components/App').default; // eslint-disable-line
 
     render(
       <AppContainer>
-        <NextApp appState={appState} />
+        <NextApp stores={stores} />
       </AppContainer>,
       document.getElementById('root')
     );
