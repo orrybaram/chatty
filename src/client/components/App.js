@@ -9,9 +9,10 @@ const propTypes = {
 @observer
 class App extends Component {
   render() {
+    const chat = this.props.stores.chat;
     return (
       <div className='app'>
-        <ChatWindow user={{}} messages={[]} recipients={[]} />
+        <ChatWindow user={chat.users} messages={chat.messages} recipients={chat.users} />
         <ChatWindow user={{}} messages={[]} recipients={[]} />
       </div>
     );
