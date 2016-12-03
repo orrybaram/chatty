@@ -25,9 +25,10 @@ class ChatMessage extends Component {
     const { message } = this.props;
     return (
       <div className='chat-window__messages__message'>
-        {message.body}
-        {message.sentBy.name}
-        {moment(message.dateCreated).fromNow()}
+        <div>{message.body}</div>
+        <div>{message.sentBy.name}</div>
+        <div>{moment(message.dateCreated).fromNow()}</div>
+        <img src={message.sentBy.avatarUrl} />
       </div>
     );
   }

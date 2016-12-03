@@ -13,7 +13,12 @@ class App extends Component {
     return (
       <div className='app'>
         <ChatWindow
-          user={{ name: 'Roger' }}
+          userId={0}
+          recipients={[]}
+          chatId={1}
+        />
+        <ChatWindow
+          userId={1}
           recipients={[]}
           chatId={1}
         />
