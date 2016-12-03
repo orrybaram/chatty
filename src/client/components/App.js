@@ -14,13 +14,8 @@ class App extends Component {
       <div className='app'>
         <ChatWindow
           user={{ name: 'Roger' }}
-          messages={this.props.stores.message.messages}
           recipients={[]}
-        />
-        <ChatWindow
-          user={{ name: 'Laura' }}
-          messages={this.props.stores.message.messages}
-          recipients={[]}
+          chatId={1}
         />
       </div>
     );

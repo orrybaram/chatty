@@ -8,8 +8,16 @@ const propTypes = {
 
 @observer
 class ChatMessage extends Component {
+  constructor() {
+    super();
+    this.interval = null;
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+    this.interval = null;
+  }
   componentDidMount() {
-    setInterval(() => {
+    this.interval = setInterval(() => {
       this.setState({});
     }, 1000);
   }

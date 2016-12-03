@@ -5,10 +5,11 @@ export default class ChatStore {
   @observable messages = [];
   @observable inputValue = '';
 
-  constructor(user, recipients, messages) {
+  constructor(user, recipients, messageStore) {
     this.user = user;
     this.recipients = recipients;
-    this.messages = messages;
+    this.messageStore = messageStore;
+    this.messages = this.messageStore.messages;
   }
 
   @action sendMessage() {
@@ -19,6 +20,7 @@ export default class ChatStore {
     };
     this.messages.push(message);
     this.inputValue = '';
+    this.messageStore.saveMessages();
   }
 
   @action updateInput(e) {

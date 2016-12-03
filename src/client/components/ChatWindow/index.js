@@ -1,22 +1,25 @@
-import React, { Component } from 'react';
-import { observer, PropTypes } from 'mobx-react';
+import React, { Component, PropTypes } from 'react';
+import { inject, observer, PropTypes as MobXPropTypes } from 'mobx-react';
 import ChatHeader from './ChatHeader';
 import ChatMessages from './ChatMessages';
 import ChatInput from './ChatInput';
 import ChatStore from '../../../shared/stores/ChatStore';
+import MessageStore from '../../../shared/stores/MessageStore';
 
 const propTypes = {
-  user: PropTypes.objectOrObservableObject,
-  recipients: PropTypes.arrayOrObservableArray,
-  messages: PropTypes.arrayOrObservableArray
+  user: MobXPropTypes.objectOrObservableObject,
+  recipients: MobXPropTypes.arrayOrObservableArray,
+  chatId: PropTypes.number
 };
 
 @observer
 class ChatWindow extends Component {
   constructor(props) {
     super(props);
-    const { user, recipients, messages } = props;
-    this.chat = new ChatStore(user, recipients, messages);
+    const { user, recipients } = props;
+
+    this.messageStore = new MessageStore(props.chatId);
+    this.chat = new ChatStore(user, recipients, this.messageStore);
     this.sendMessage = this.chat.sendMessage.bind(this.chat);
     this.updateInput = this.chat.updateInput.bind(this.chat);
   }

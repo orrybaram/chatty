@@ -11,8 +11,12 @@ export const getChatMessages = () => {
 };
 
 export const getChatMessagesById = (id) => {
-  const messages = getChatMessages();
-  return messages.filter(({ id: messageId }) => id === messageId)[0];
+  const allChats = getChatMessages();
+  const chat = allChats.filter(({ id: messageId }) => id === messageId)[0];
+  if (chat) {
+    return chat.messages;
+  }
+  return [];
 };
 
 export const saveChatMessages = ({ id, messages }) => {
