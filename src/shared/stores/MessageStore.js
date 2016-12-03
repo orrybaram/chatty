@@ -5,9 +5,12 @@ export default class MessageStore {
   @observable messages = [];
   constructor(id) {
     this.id = id;
-    this.messages = getChatMessagesById(this.id);
+    this.loadMessages()
   }
 
+  @action loadMessages() {
+    this.messages = getChatMessagesById(this.id);
+  }
   @action saveMessages() {
     saveChatMessages({id: this.id, messages: this.messages});
   }

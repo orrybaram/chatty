@@ -21,7 +21,7 @@ export const getChatMessagesById = (id) => {
 
 export const saveChatMessages = ({ id, messages }) => {
   if (id === undefined || !messages) {
-    throw new Error('Error: Invalid message structure');
+    throw new Error('saveChatMessages: missing id or messages');
   }
   const messageStorage = getChatMessages();
   const overwriteIndex = messageStorage.findIndex(x => x.id === id);

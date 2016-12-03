@@ -36,7 +36,7 @@ describe('saveChatMessages', () => {
   it('returns with a 200 if saved', () => {
     expect(saveChatMessages(mockChatMessage)).toEqual({ status: 200 });
     const chat = getChatMessagesById(0);
-    expect(chat.messages.length).toBe(2);
+    expect(chat.length).toBe(2);
   });
   it('overwrites an entry with the same id', () => {
     const newMessage = Object.assign({}, mockChatMessage);
@@ -50,19 +50,18 @@ describe('saveChatMessages', () => {
 
     saveChatMessages(newMessage);
     const chat = getChatMessagesById(0);
-    expect(chat.messages.length).toBe(3);
+    expect(chat.length).toBe(3);
   });
 });
 
 describe('getChatMessagesById', () => {
   it('returns chat history by id', () => {
     const chatHistory = getChatMessagesById(0);
-    expect(chatHistory.id).toBe(0);
-    expect(chatHistory.messages.length).toBe(3);
+    expect(chatHistory.length).toBe(3);
   });
 
   it('returns undefined if not found', () => {
     const chatHistory = getChatMessagesById(1);
-    expect(chatHistory).toBeUndefined();
+    expect(chatHistory).toEqual([]);
   });
 });

@@ -1,20 +1,21 @@
 import ChatStore from '../../src/shared/stores/ChatStore';
+import MessageStore from '../../src/shared/stores/MessageStore';
 
 describe('ChatStore', () => {
-  const chat = new ChatStore({}, [], []);
+  const chatStore = new ChatStore({}, [], new MessageStore(0));
   describe('sendMessage', () => {
     it('updates the messages array and clears input', () => {
-      chat.inputValue = 'beep boop';
-      chat.sendMessage();
-      expect(chat.messages[0].body).toBe('beep boop');
-      expect(chat.inputValue).toBe('');
+      chatStore.inputValue = 'beep boop';
+      chatStore.sendMessage();
+      expect(chatStore.messages[0].body).toBe('beep boop');
+      expect(chatStore.inputValue).toBe('');
     });
   });
   describe('updateInput', () => {
     it('updates the inputValue', () => {
-      chat.inputValue = '';
-      chat.updateInput({ target: { value: 'beep' } });
-      expect(chat.inputValue).toBe('beep');
+      chatStore.inputValue = '';
+      chatStore.updateInput({ target: { value: 'beep' } });
+      expect(chatStore.inputValue).toBe('beep');
     });
   });
 });
