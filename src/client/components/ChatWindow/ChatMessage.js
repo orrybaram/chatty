@@ -3,7 +3,8 @@ import { observer } from 'mobx-react';
 import moment from 'moment';
 
 const propTypes = {
-  message: PropTypes.object
+  message: PropTypes.object,
+  refreshRate: PropTypes.number
 };
 
 @observer
@@ -11,15 +12,18 @@ class ChatMessage extends Component {
   constructor() {
     super();
     this.interval = null;
+    this.renderCount = 0;
+  }
+  updateRenderCount() {
+    this.setState({renderCount: ++this.renderCount});
   }
   componentWillUnmount() {
     clearInterval(this.interval);
     this.interval = null;
   }
   componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setState({});
-    }, 1000);
+    this.updateRenderCount();
+    this.interval = setInterval(this.updateRenderCount, this.props.refreshRate || (60 * 1000));
   }
   render() {
     const { message } = this.props;
