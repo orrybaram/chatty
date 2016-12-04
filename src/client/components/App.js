@@ -14,12 +14,12 @@ class App extends Component {
       <div className='app'>
         <ChatWindow
           userId={0}
-          recipients={[]}
+          recipientIds={[1]}
           chatId={1}
         />
         <ChatWindow
           userId={1}
-          recipients={[]}
+          recipientIds={[0]}
           chatId={1}
         />
       </div>

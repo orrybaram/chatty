@@ -1,15 +1,17 @@
-import React, { PropTypes } from 'react';
-import { observer } from 'mobx-react';
+import React  from 'react';
+import { observer, PropTypes } from 'mobx-react';
 
 const propTypes = {
-  prop: PropTypes.object
+  recipients: PropTypes.arrayOrObservableArray
 };
 
-const ChatHeader = (props) => {
+const ChatHeader = ({ recipients }) => {
   return (
-    <div>Im a Header look at me!</div>
+    <div className='chat-window__header'>
+      Chatting with { recipients.map(user => user.name) }
+    </div>
   );
-}
+};
 
 ChatHeader.propTypes = propTypes;
 export default observer(ChatHeader);
