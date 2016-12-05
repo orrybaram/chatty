@@ -9,7 +9,7 @@ describe('ChatInput', () => {
     function sendMessage() {
       sent = true;
     }
-    const input = mount(<ChatInput sendMessage={sendMessage} />);
+    const input = mount(<ChatInput inputValue='' sendMessage={sendMessage} />);
     input.find('button').get(0).click();
     expect(sent).toBe(true);
   });

@@ -2,23 +2,15 @@ exports[`ChatMessage renders correctly 1`] = `
 <div
   className="chat-window__messages__message">
   <div
-    className="chat-window__messages__message__body">
-    yo
+    className="chat-window__messages__message-wrapper">
+    <div
+      className="chat-window__messages__message__body">
+      yo
+    </div>
+    <div
+      className="chat-window__messages__message__date">
+      a few seconds ago
+    </div>
   </div>
-  <div
-    className="chat-window__messages__message__name">
-    gary
-  </div>
-  <div
-    className="chat-window__messages__message__date">
-    a few seconds ago
-  </div>
-  <div
-    className="chat-window__messages__message__avatar"
-    style={
-      Object {
-        "backgroundImage": "url(undefined)",
-      }
-    } />
 </div>
 `;

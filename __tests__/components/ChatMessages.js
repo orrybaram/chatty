@@ -15,7 +15,7 @@ describe('ChatMessages', () => {
       dateCreated: new Date(),
       sentBy: { name: 'bags' }
     }];
-    const component = renderer.create(<ChatMessages recipients={[]} messages={messages} />);
+    const component = renderer.create(<ChatMessages user={{}} recipients={[]} messages={messages} />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

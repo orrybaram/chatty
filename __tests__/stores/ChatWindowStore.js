@@ -18,4 +18,15 @@ describe('ChatWindowStore', () => {
       expect(chatWindowStore.inputValue).toBe('beep');
     });
   });
+  describe('showUserIsTyping', () => {
+    it('clears after 2000ms', () => {
+      chatWindowStore.showUserIsTyping(100);
+      expect(chatWindowStore.user.isTyping).toBe(true);
+      expect(chatWindowStore.typingTimeout).toBeTruthy();
+      setTimeout(() => {
+        expect(chatWindowStore.typingTimeout).toBe(null);
+        expect(chatWindowStore.user.isTyping).toBe(false);
+      }, 101);
+    });
+  });
 });

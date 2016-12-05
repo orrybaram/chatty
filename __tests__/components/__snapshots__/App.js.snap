@@ -7,6 +7,13 @@ exports[`App renders correctly 1`] = `
       className="chat-window__header">
       Chatting with 
       Laura
+      <div
+        className="chat-window__header__avatar"
+        style={
+          Object {
+            "backgroundImage": "url(http://www.famousbirthdays.com/thumbnails/prepon-laura-large.jpg)",
+          }
+        } />
     </div>
     <div
       className="chat-window__messages">
@@ -20,12 +27,15 @@ exports[`App renders correctly 1`] = `
       </div>
     </div>
     <form
+      className="chat-window__input-form"
       onSubmit={[Function]}>
       <input
+        className="chat-window__input-form__input"
         onChange={[Function]}
-        placeholder="Send Message"
+        placeholder="Your message"
         value="" />
-      <button>
+      <button
+        className="chat-window__input-form__send-button">
         Send
       </button>
     </form>
@@ -36,6 +46,13 @@ exports[`App renders correctly 1`] = `
       className="chat-window__header">
       Chatting with 
       Rob
+      <div
+        className="chat-window__header__avatar"
+        style={
+          Object {
+            "backgroundImage": "url(https://pbs.twimg.com/profile_images/434822125396848640/WXyKtdMG.jpeg)",
+          }
+        } />
     </div>
     <div
       className="chat-window__messages">
@@ -49,12 +66,15 @@ exports[`App renders correctly 1`] = `
       </div>
     </div>
     <form
+      className="chat-window__input-form"
       onSubmit={[Function]}>
       <input
+        className="chat-window__input-form__input"
         onChange={[Function]}
-        placeholder="Send Message"
+        placeholder="Your message"
         value="" />
-      <button>
+      <button
+        className="chat-window__input-form__send-button">
         Send
       </button>
     </form>

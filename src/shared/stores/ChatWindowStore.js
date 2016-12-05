@@ -30,11 +30,14 @@ export default class ChatWindowStore {
     this.showUserIsTyping();
   }
 
-  @action showUserIsTyping() {
+  @action showUserIsTyping(timeout) {
     this.user.isTyping = true;
     if (this.typingTimeout) {
       clearTimeout(this.typingTimeout);
     }
-    this.typingTimeout = setTimeout(() => this.user.isTyping = false, 2000);
+    /* istanbul ignore next */
+    this.typingTimeout = setTimeout(() => (
+      this.user.isTyping = false, (timeout || 2000)
+    ));
   }
 }

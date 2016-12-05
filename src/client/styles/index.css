@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+:root {
+  --primary: #866292;
+  --secondary: #f3f0f5;
+}
 
 body {
   background: #f1f1f1;
   font-family: 'Open Sans', sans-serif;
+  color: #534d5d;
 }
 
 .app {
@@ -16,33 +22,88 @@ body {
   margin: 50px;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
   background: white;
-  border-top: 5px solid #866292;
   position: relative;
-}
 
-.chat-window__messages {
-    height: 82%;
-  overflow: auto;
+  &:before {
+    content: '';
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, #cfa7d6 , var(--primary));
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
 }
-
-.chat-window__messages__message__avatar {
+.chat-window__header {
+  box-shadow: 0 5px 35px -10px rgba(0,0,0,0.1);
+}
+.chat-window__header__avatar {
   border-radius: 50%;
   width: 30px;
   height: 30px;
   background-size: 100%;
 }
 
+.chat-window__messages {
+  height: 74%;
+  overflow: auto;
+}
+
+.chat-window__messages__message {
+  overflow: auto;
+  text-align: left;
+}
+
+.chat-window__messages__message--user {
+  text-align: right;
+  .chat-window__messages__message-wrapper {
+    float: right;
+  }
+  .chat-window__messages__message__body {
+    background: var(--secondary);
+    float: right;
+  }
+  .chat-window__messages__message__date {
+    text-align: right;
+  }
+}
+.chat-window__messages__message-wrapper {
+  max-width: 300px;
+  float: left;
+}
+
+.chat-window__messages__message-wrapper {
+  margin: 10px;
+  max-width: 300px;
+  float: left;
+}
+
+.chat-window__messages__message__body {
+  border: 2px solid var(--secondary);
+  padding: 10px 20px;
+  font-weight: 600;
+  max-width: 70%;
+}
+
+.chat-window__messages__message__date {
+  font-size: 10px;
+  text-align: left;
+  color: #a0a0a0;
+  clear: both;
+}
+
+
 .chat-window__input-form {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: #f3f0f5;
+  background: var(--secondary);
   margin: 0;
 }
 .chat-window__input-form__input {
   font-family: 'Open Sans', sans-serif;
-  background: #f3f0f5;
-  padding: 15px;
+  background: var(--secondary);
+  padding: 15px 60px 15px 15px;
   border: 0;
   font-size: 16px;
   width: 100%;
@@ -61,6 +122,11 @@ body {
 
 .typing-indicator {
   opacity: 0;
+  text-align: left;
+  padding: 15px 10px;
+  font-size: 12px;
+  color: #a6a2a9;
+  font-weight: 600;
 }
 
 .typing-indicator--shown {

@@ -35,15 +35,12 @@ class ChatMessage extends Component {
     ]);
     return (
       <div className={messageClass}>
-        <div className='chat-window__messages__message__body'>{message.body}</div>
-        <div className='chat-window__messages__message__name'>{message.sentBy.name}</div>
-        <div className='chat-window__messages__message__date'>
-          {moment(message.dateCreated).fromNow()}
+        <div className='chat-window__messages__message-wrapper'>
+          <div className='chat-window__messages__message__body'>{message.body}</div>
+          <div className='chat-window__messages__message__date'>
+            {moment(message.dateCreated).fromNow()}
+          </div>
         </div>
-        <div
-          className='chat-window__messages__message__avatar'
-          style={{ backgroundImage: `url(${message.sentBy.avatarUrl})` }}
-        />
       </div>
     );
   }
