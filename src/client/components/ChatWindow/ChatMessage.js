@@ -23,7 +23,7 @@ class ChatMessage extends Component {
   }
   componentDidMount() {
     this.updateRenderCount();
-    this.interval = setInterval(() => this.updateRenderCount(), this.props.refreshRate || (1000));
+    this.interval = setInterval(/* istanbul ignore next */() => this.updateRenderCount(), this.props.refreshRate || (1000));
   }
   render() {
     const { message } = this.props;
