@@ -3,11 +3,22 @@ exports[`App renders correctly 1`] = `
   className="app">
   <div
     className="chat-window">
-    <div>
-      Im a Header look at me!
+    <div
+      className="chat-window__header">
+      Chatting with 
+      Laura
     </div>
     <div
-      className="chat-window__messages" />
+      className="chat-window__messages">
+      <div
+        className="chat-window__messages__typing-indicators">
+        <div
+          className="typing-indicator">
+          Laura
+           is typing
+        </div>
+      </div>
+    </div>
     <form
       onSubmit={[Function]}>
       <input
@@ -21,11 +32,22 @@ exports[`App renders correctly 1`] = `
   </div>
   <div
     className="chat-window">
-    <div>
-      Im a Header look at me!
+    <div
+      className="chat-window__header">
+      Chatting with 
+      Rob
     </div>
     <div
-      className="chat-window__messages" />
+      className="chat-window__messages">
+      <div
+        className="chat-window__messages__typing-indicators">
+        <div
+          className="typing-indicator">
+          Rob
+           is typing
+        </div>
+      </div>
+    </div>
     <form
       onSubmit={[Function]}>
       <input

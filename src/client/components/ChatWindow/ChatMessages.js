@@ -17,7 +17,7 @@ const ChatMessages = ({ messages, recipients }) => {
       'typing-indicator',
       { 'typing-indicator--shown': user.isTyping }
     ]);
-    return (<div className={classes}>{user.name} is typing</div>);
+    return (<div key={shortId.generate()} className={classes}>{user.name} is typing</div>);
   });
 
   return (
