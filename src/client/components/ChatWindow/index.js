@@ -7,7 +7,6 @@ import ChatWindowStore from '../../../shared/stores/ChatWindowStore';
 
 const propTypes = {
   messageStore: MobXPropTypes.objectOrObservableObject,
-  users: MobXPropTypes.arrayOrObservableArray,
   recipients: MobXPropTypes.arrayOrObservableArray
 };
 
@@ -27,7 +26,11 @@ class ChatWindow extends Component {
     return (
       <div className='chat-window'>
         <ChatHeader recipients={this.chat.recipients} />
-        <ChatMessages recipients={this.chat.recipients} messages={this.chat.messages} />
+        <ChatMessages
+          user={user}
+          recipients={this.chat.recipients}
+          messages={this.chat.messages}
+        />
         <ChatInput
           updateInput={this.updateInput}
           sendMessage={this.sendMessage}

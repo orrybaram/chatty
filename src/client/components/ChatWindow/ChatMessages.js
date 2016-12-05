@@ -6,18 +6,19 @@ import ChatMessage from './ChatMessage';
 
 const propTypes = {
   messages: PropTypes.arrayOrObservableArray,
-  recipients: PropTypes.arrayOrObservableArray
+  recipients: PropTypes.arrayOrObservableArray,
+  user: PropTypes.arrayOrObservableArray
 };
 
-const ChatMessages = ({ messages, recipients }) => {
-  const messageEls = messages.map(msg => <ChatMessage key={shortId.generate()} message={msg} />);
+const ChatMessages = ({ messages, recipients, user }) => {
+  const messageEls = messages.map(msg => <ChatMessage key={shortId.generate()} user={user} message={msg} />);
 
-  const typingIndicators = recipients.map((user) => {
+  const typingIndicators = recipients.map((_user) => {
     const classes = classNames([
       'typing-indicator',
-      { 'typing-indicator--shown': user.isTyping }
+      { 'typing-indicator--shown': _user.isTyping }
     ]);
-    return (<div key={shortId.generate()} className={classes}>{user.name} is typing</div>);
+    return (<div key={shortId.generate()} className={classes}>{_user.name} is typing</div>);
   });
 
   return (

@@ -20,6 +20,11 @@ body {
   position: relative;
 }
 
+.chat-window__messages {
+  height: 82%;
+  overflow: auto;
+}
+
 .chat-window__messages__message__avatar {
   border-radius: 50%;
   width: 30px;
