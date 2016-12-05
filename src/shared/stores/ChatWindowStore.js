@@ -10,6 +10,8 @@ export default class ChatWindowStore {
     this.recipients = recipients;
     this.messageStore = messageStore;
     this.messages = this.messageStore.messages;
+
+    this.typingTimeout = null;
   }
 
   @action sendMessage() {
@@ -25,5 +27,14 @@ export default class ChatWindowStore {
 
   @action updateInput(e) {
     this.inputValue = e.target.value;
+    this.showUserIsTyping();
+  }
+
+  @action showUserIsTyping() {
+    this.user.isTyping = true;
+    if (this.typingTimeout) {
+      clearTimeout(this.typingTimeout);
+    }
+    this.typingTimeout = setTimeout(() => this.user.isTyping = false, 2000);
   }
 }
