@@ -27,7 +27,7 @@ class ChatWindow extends Component {
       <div className='chat-window'>
         <ChatHeader recipients={this.chat.recipients} />
         <ChatMessages
-          user={user}
+          user={this.user}
           recipients={this.chat.recipients}
           messages={this.chat.messages}
         />

@@ -6,6 +6,7 @@ export default class UserStore {
   @observable isActive = false;
 
   constructor(id) {
+    this.id = id;
     const user = getUser(id);
     this.name = user.name;
     this.avatarUrl = user.avatarUrl;

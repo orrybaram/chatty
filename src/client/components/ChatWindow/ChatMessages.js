@@ -7,11 +7,21 @@ import ChatMessage from './ChatMessage';
 const propTypes = {
   messages: PropTypes.arrayOrObservableArray,
   recipients: PropTypes.arrayOrObservableArray,
-  user: PropTypes.arrayOrObservableArray
+  user: PropTypes.objectOrObservableObject
 };
 
 const ChatMessages = ({ messages, recipients, user }) => {
-  const messageEls = messages.map(msg => <ChatMessage key={shortId.generate()} user={user} message={msg} />);
+  const messageEls = messages.map((msg) => {
+    const isUser = user.id === msg.sentBy.id;
+    return (
+      <ChatMessage
+        key={shortId.generate()}
+        user={user}
+        isUser={isUser}
+        message={msg}
+      />
+    );
+  });
 
   const typingIndicators = recipients.map((_user) => {
     const classes = classNames([
