@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { observer } from 'mobx-react';
 import ChatWindow from './ChatWindow';
+import UserStore from '../../shared/stores/UserStore';
+import MessageStore from '../../shared/stores/MessageStore';
 import '../styles/index.css';
 
 const propTypes = {
@@ -9,18 +11,25 @@ const propTypes = {
 
 @observer
 class App extends Component {
+  constructor() {
+    super();
+
+    this.userOne = new UserStore(0);
+    this.userTwo = new UserStore(1);
+    this.messageStore = new MessageStore(0);
+  }
   render() {
     return (
       <div className='app'>
         <ChatWindow
-          userId={0}
-          recipientIds={[1]}
-          chatId={1}
+          user={this.userOne}
+          recipients={[this.userTwo]}
+          messageStore={this.messageStore}
         />
         <ChatWindow
-          userId={1}
-          recipientIds={[0]}
-          chatId={1}
+          user={this.userTwo}
+          recipients={[this.userOne]}
+          messageStore={this.messageStore}
         />
       </div>
     );
