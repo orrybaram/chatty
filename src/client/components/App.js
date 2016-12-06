@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { observer } from 'mobx-react';
-import DevTools from 'mobx-react-devtools';
 import ChatWindow from './ChatWindow';
 import '../styles/index.css';
 
@@ -24,7 +23,6 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <DevTools />
         <ChatWindow
           chatStore={this.chatOne}
         />
