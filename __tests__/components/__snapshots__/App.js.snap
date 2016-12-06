@@ -38,7 +38,7 @@ exports[`App renders correctly 1`] = `
             </div>
             <div
               className="chat-window__messages__message__date">
-              2 hours ago
+              3 hours ago
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ exports[`App renders correctly 1`] = `
             </div>
             <div
               className="chat-window__messages__message__date">
-              an hour ago
+              2 hours ago
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ exports[`App renders correctly 1`] = `
             </div>
             <div
               className="chat-window__messages__message__date">
-              an hour ago
+              2 hours ago
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ exports[`App renders correctly 1`] = `
             </div>
             <div
               className="chat-window__messages__message__date">
-              2 hours ago
+              3 hours ago
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@ exports[`App renders correctly 1`] = `
             </div>
             <div
               className="chat-window__messages__message__date">
-              an hour ago
+              2 hours ago
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@ exports[`App renders correctly 1`] = `
             </div>
             <div
               className="chat-window__messages__message__date">
-              an hour ago
+              2 hours ago
             </div>
           </div>
         </div>

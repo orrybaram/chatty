@@ -37,6 +37,7 @@ export const saveChatMessages = ({ id, messages }) => {
 };
 
 // Adds a default chat
+/* istanbul ignore next */
 if (!getChatMessages().length) {
   localStorage.setItem('ChatMessages', JSON.stringify(Chats));
 }

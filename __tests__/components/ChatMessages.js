@@ -38,4 +38,3 @@ describe('ChatMessages', () => {
     expect(component.find('.typing-indicator').get(0).className).toBe('typing-indicator typing-indicator--shown');
   });
 });
-

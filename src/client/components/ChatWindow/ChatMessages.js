@@ -18,6 +18,7 @@ class ChatMessages extends Component {
     this.isScrolledToBottom = false;
   }
   componentDidMount() {
+    /* istanbul ignore next */
     setTimeout(() => {
       this.scrollToBottom();
     }, 250);
@@ -30,10 +31,12 @@ class ChatMessages extends Component {
     );
   }
   componentDidUpdate() {
+    /* istanbul ignore next */
     if (this.isScrolledToBottom) {
       this.scrollToBottom();
     }
   }
+  /* istanbul ignore next */
   scrollToBottom() {
     this.messagesWindow.scrollTop = this.messagesWindow.scrollHeight;
   }
