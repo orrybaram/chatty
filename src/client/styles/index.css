@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
 
 :root {
   --primary: #866292;
@@ -99,6 +100,7 @@ body {
   width: 100%;
   background: var(--secondary);
   margin: 0;
+  overflow: hidden;
 }
 .chat-window__input-form__input {
   font-family: 'Open Sans', sans-serif;
@@ -112,12 +114,21 @@ body {
 .chat-window__input-form__send-button {
   position: absolute;
   right: 10px;
-  top: 12px;
+  top: 8px;
+  border: 0;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background: #800080;
+  color: #fff;
+  font-size: 20px;
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
+  transform: translate3d(0, 50px, 0);
 }
 .chat-window__input-form__send-button--shown {
   opacity: 1;
+  transform: translate3d(0, 0px, 0);
 }
 
 .typing-indicator {

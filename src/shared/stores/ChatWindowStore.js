@@ -23,6 +23,7 @@ export default class ChatWindowStore {
     this.messages.push(message);
     this.inputValue = '';
     this.messageStore.saveMessages();
+    this.user.isTyping = false;
   }
 
   @action updateInput(e) {
