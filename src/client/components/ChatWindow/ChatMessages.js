@@ -3,6 +3,7 @@ import { observer, PropTypes } from 'mobx-react';
 import shortId from 'shortid';
 import classNames from 'classnames';
 import ChatMessage from './ChatMessage';
+import TypingIndicator from './TypingIndicator';
 
 const propTypes = {
   messages: PropTypes.arrayOrObservableArray,
@@ -46,20 +47,12 @@ class ChatMessages extends Component {
       );
     });
 
-    const typingIndicators = recipients.map((_user) => {
-      const classes = classNames([
-        'typing-indicator',
-        { 'typing-indicator--shown': _user.isTyping }
-      ]);
-      return (<div key={shortId.generate()} className={classes}>{_user.name} is typing</div>);
-    });
-
     return (
       <div className='chat-window__messages' ref={(ref) => { this.messagesWindow = ref; }}>
-        {messageEls}
-        <div className='chat-window__messages__typing-indicators'>
-          {typingIndicators}
+        <div>
+          {messageEls}
         </div>
+        <TypingIndicator recipients={recipients} />
       </div>
     );
   }

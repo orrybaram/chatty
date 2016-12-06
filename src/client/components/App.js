@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { observer } from 'mobx-react';
-import ChatWindow from './ChatWindow';
-import UserStore from '../../shared/stores/UserStore';
-import MessageStore from '../../shared/stores/MessageStore';
-import ChatWindowStore from '../../shared/stores/ChatWindowStore';
 import DevTools from 'mobx-react-devtools';
+import ChatWindow from './ChatWindow';
 import '../styles/index.css';
 
 const propTypes = {
@@ -13,8 +10,10 @@ const propTypes = {
 
 @observer
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    const { UserStore, MessageStore, ChatWindowStore } = props.stores;
 
     this.userOne = new UserStore(0);
     this.userTwo = new UserStore(1);

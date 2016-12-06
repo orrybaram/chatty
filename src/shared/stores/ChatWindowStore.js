@@ -2,7 +2,6 @@ import { observable, action } from 'mobx';
 
 export default class ChatWindowStore {
   @observable recipients = [];
-  @observable messages = [];
   @observable inputValue = '';
 
   constructor(user, recipients, messageStore) {
@@ -32,7 +31,10 @@ export default class ChatWindowStore {
   }
 
   @action showUserIsTyping(timeout) {
-    this.user.isTyping = true;
+    if (!this.user.isTyping) {
+      this.user.isTyping = true;
+    }
+
     if (this.typingTimeout) {
       clearTimeout(this.typingTimeout);
     }

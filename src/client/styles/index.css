@@ -159,6 +159,10 @@ body {
   transform: translate3d(0, 0px, 0);
 }
 
+.chat-window__typing-indicators {
+
+}
+
 .typing-indicator {
   opacity: 0;
   text-align: left;

@@ -5,18 +5,70 @@ exports[`App renders correctly 1`] = `
     className="chat-window">
     <div
       className="chat-window__header">
-      Chatting with 
-      Laura
       <div
-        className="chat-window__header__avatar"
-        style={
-          Object {
-            "backgroundImage": "url(http://www.famousbirthdays.com/thumbnails/prepon-laura-large.jpg)",
-          }
-        } />
+        className="chat-window__header__recipients">
+        <div
+          className="chat-window__header__recipients__recipient">
+          <div
+            className="header__recipient__avatar"
+            style={
+              Object {
+                "backgroundImage": "url(http://www.famousbirthdays.com/thumbnails/prepon-laura-large.jpg)",
+              }
+            } />
+          <div
+            className="header__recipient__name">
+            Laura
+          </div>
+          <div
+            className="header__recipient__activity-monitor header__recipient__activity-monitor--active" />
+        </div>
+      </div>
     </div>
     <div
       className="chat-window__messages">
+      <div
+        className="chat-window__messages__message">
+        <div
+          className="chat-window__messages__message-wrapper">
+          <div
+            className="chat-window__messages__message__body">
+            Hi I\'m Laura how can I help you?
+          </div>
+          <div
+            className="chat-window__messages__message__date">
+            an hour ago
+          </div>
+        </div>
+      </div>
+      <div
+        className="chat-window__messages__message chat-window__messages__message--user">
+        <div
+          className="chat-window__messages__message-wrapper">
+          <div
+            className="chat-window__messages__message__body">
+            I think i broke my computer what do I do?
+          </div>
+          <div
+            className="chat-window__messages__message__date">
+            38 minutes ago
+          </div>
+        </div>
+      </div>
+      <div
+        className="chat-window__messages__message">
+        <div
+          className="chat-window__messages__message-wrapper">
+          <div
+            className="chat-window__messages__message__body">
+            ¯\\_(ツ)_/¯ 
+          </div>
+          <div
+            className="chat-window__messages__message__date">
+            35 minutes ago
+          </div>
+        </div>
+      </div>
       <div
         className="chat-window__messages__typing-indicators">
         <div
@@ -35,8 +87,10 @@ exports[`App renders correctly 1`] = `
         placeholder="Your message"
         value="" />
       <button
-        className="chat-window__input-form__send-button">
-        Send
+        className="chat-window__input-form__send-button"
+        tabIndex="-1">
+        <i
+          className="fa fa-paper-plane" />
       </button>
     </form>
   </div>
@@ -44,18 +98,70 @@ exports[`App renders correctly 1`] = `
     className="chat-window">
     <div
       className="chat-window__header">
-      Chatting with 
-      Rob
       <div
-        className="chat-window__header__avatar"
-        style={
-          Object {
-            "backgroundImage": "url(https://pbs.twimg.com/profile_images/434822125396848640/WXyKtdMG.jpeg)",
-          }
-        } />
+        className="chat-window__header__recipients">
+        <div
+          className="chat-window__header__recipients__recipient">
+          <div
+            className="header__recipient__avatar"
+            style={
+              Object {
+                "backgroundImage": "url(https://pbs.twimg.com/profile_images/434822125396848640/WXyKtdMG.jpeg)",
+              }
+            } />
+          <div
+            className="header__recipient__name">
+            Rob
+          </div>
+          <div
+            className="header__recipient__activity-monitor header__recipient__activity-monitor--active" />
+        </div>
+      </div>
     </div>
     <div
       className="chat-window__messages">
+      <div
+        className="chat-window__messages__message chat-window__messages__message--user">
+        <div
+          className="chat-window__messages__message-wrapper">
+          <div
+            className="chat-window__messages__message__body">
+            Hi I\'m Laura how can I help you?
+          </div>
+          <div
+            className="chat-window__messages__message__date">
+            an hour ago
+          </div>
+        </div>
+      </div>
+      <div
+        className="chat-window__messages__message">
+        <div
+          className="chat-window__messages__message-wrapper">
+          <div
+            className="chat-window__messages__message__body">
+            I think i broke my computer what do I do?
+          </div>
+          <div
+            className="chat-window__messages__message__date">
+            38 minutes ago
+          </div>
+        </div>
+      </div>
+      <div
+        className="chat-window__messages__message chat-window__messages__message--user">
+        <div
+          className="chat-window__messages__message-wrapper">
+          <div
+            className="chat-window__messages__message__body">
+            ¯\\_(ツ)_/¯ 
+          </div>
+          <div
+            className="chat-window__messages__message__date">
+            35 minutes ago
+          </div>
+        </div>
+      </div>
       <div
         className="chat-window__messages__typing-indicators">
         <div
@@ -74,8 +180,10 @@ exports[`App renders correctly 1`] = `
         placeholder="Your message"
         value="" />
       <button
-        className="chat-window__input-form__send-button">
-        Send
+        className="chat-window__input-form__send-button"
+        tabIndex="-1">
+        <i
+          className="fa fa-paper-plane" />
       </button>
     </form>
   </div>

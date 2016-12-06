@@ -2,7 +2,7 @@ import ChatWindowStore from '../../src/shared/stores/ChatWindowStore';
 import MessageStore from '../../src/shared/stores/MessageStore';
 
 describe('ChatWindowStore', () => {
-  const chatWindowStore = new ChatWindowStore({}, [], new MessageStore(0));
+  const chatWindowStore = new ChatWindowStore({}, [], new MessageStore(100));
   describe('sendMessage', () => {
     it('updates the messages array and clears input', () => {
       chatWindowStore.inputValue = 'beep boop';
