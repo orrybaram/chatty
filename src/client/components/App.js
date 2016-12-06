@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import ChatWindow from './ChatWindow';
 import UserStore from '../../shared/stores/UserStore';
 import MessageStore from '../../shared/stores/MessageStore';
+import ChatWindowStore from '../../shared/stores/ChatWindowStore';
 import '../styles/index.css';
 
 const propTypes = {
@@ -17,19 +18,17 @@ class App extends Component {
     this.userOne = new UserStore(0);
     this.userTwo = new UserStore(1);
     this.messageStore = new MessageStore(0);
+    this.chatOne = new ChatWindowStore(this.userOne, [this.userTwo], this.messageStore);
+    this.chatTwo = new ChatWindowStore(this.userTwo, [this.userOne], this.messageStore);
   }
   render() {
     return (
       <div className='app'>
         <ChatWindow
-          user={this.userOne}
-          recipients={[this.userTwo]}
-          messageStore={this.messageStore}
+          chatStore={this.chatOne}
         />
         <ChatWindow
-          user={this.userTwo}
-          recipients={[this.userOne]}
-          messageStore={this.messageStore}
+          chatStore={this.chatTwo}
         />
       </div>
     );

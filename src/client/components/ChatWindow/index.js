@@ -1,40 +1,35 @@
-import React, { Component, PropTypes } from 'react';
-import { inject, observer, PropTypes as MobXPropTypes } from 'mobx-react';
+import React, { Component } from 'react';
+import { observer, PropTypes } from 'mobx-react';
 import ChatHeader from './ChatHeader';
 import ChatMessages from './ChatMessages';
 import ChatInput from './ChatInput';
-import ChatWindowStore from '../../../shared/stores/ChatWindowStore';
 
 const propTypes = {
-  messageStore: MobXPropTypes.objectOrObservableObject,
-  recipients: MobXPropTypes.arrayOrObservableArray
+  chatStore: PropTypes.objectOrObservableObject
 };
 
 @observer
 class ChatWindow extends Component {
   constructor(props) {
     super(props);
-    const { user, recipients, messageStore } = props;
-
-    this.user = user;
-    this.chat = new ChatWindowStore(this.user, recipients, messageStore);
-
-    this.sendMessage = this.chat.sendMessage.bind(this.chat);
-    this.updateInput = this.chat.updateInput.bind(this.chat);
+    const { chatStore } = props;
+    this.chatStore = chatStore;
+    this.sendMessage = this.chatStore.sendMessage.bind(this.chatStore);
+    this.updateInput = this.chatStore.updateInput.bind(this.chatStore);
   }
   render() {
     return (
       <div className='chat-window'>
-        <ChatHeader recipients={this.chat.recipients} />
+        <ChatHeader recipients={this.chatStore.recipients} />
         <ChatMessages
-          user={this.user}
-          recipients={this.chat.recipients}
-          messages={this.chat.messages}
+          user={this.chatStore.user}
+          recipients={this.chatStore.recipients}
+          messages={this.chatStore.messages}
         />
         <ChatInput
           updateInput={this.updateInput}
           sendMessage={this.sendMessage}
-          inputValue={this.chat.inputValue}
+          inputValue={this.chatStore.inputValue}
         />
       </div>
     );
