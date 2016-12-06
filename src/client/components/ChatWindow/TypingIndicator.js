@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import shortId from 'shortid';
 
 const propTypes = {
-  recipients: PropTypes.objectOrObservableObject
+  recipients: PropTypes.arrayOrObservableArray
 };
 
 const TypingIndicator = ({ recipients }) => {

@@ -1,35 +1,37 @@
 exports[`ChatMessages renders correctly 1`] = `
 <div
   className="chat-window__messages">
-  <div
-    className="chat-window__messages__message chat-window__messages__message--user">
+  <div>
     <div
-      className="chat-window__messages__message-wrapper">
+      className="chat-window__messages__message chat-window__messages__message--user">
       <div
-        className="chat-window__messages__message__body">
-        yo
+        className="chat-window__messages__message-wrapper">
+        <div
+          className="chat-window__messages__message__body">
+          yo
+        </div>
+        <div
+          className="chat-window__messages__message__date">
+          a few seconds ago
+        </div>
       </div>
+    </div>
+    <div
+      className="chat-window__messages__message chat-window__messages__message--user">
       <div
-        className="chat-window__messages__message__date">
-        a few seconds ago
+        className="chat-window__messages__message-wrapper">
+        <div
+          className="chat-window__messages__message__body">
+          sup
+        </div>
+        <div
+          className="chat-window__messages__message__date">
+          a few seconds ago
+        </div>
       </div>
     </div>
   </div>
   <div
-    className="chat-window__messages__message chat-window__messages__message--user">
-    <div
-      className="chat-window__messages__message-wrapper">
-      <div
-        className="chat-window__messages__message__body">
-        sup
-      </div>
-      <div
-        className="chat-window__messages__message__date">
-        a few seconds ago
-      </div>
-    </div>
-  </div>
-  <div
-    className="chat-window__messages__typing-indicators" />
+    className="chat-window__typing-indicators" />
 </div>
 `;

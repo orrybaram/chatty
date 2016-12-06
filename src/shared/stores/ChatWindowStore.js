@@ -38,7 +38,7 @@ export default class ChatWindowStore {
     if (this.typingTimeout) {
       clearTimeout(this.typingTimeout);
     }
-    // /* istanbul ignore next */
+    /* istanbul ignore next */
     this.typingTimeout = setTimeout(() => (
       this.user.isTyping = false
     ), (timeout || 2000));
