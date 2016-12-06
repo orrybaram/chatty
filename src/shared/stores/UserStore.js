@@ -3,7 +3,7 @@ import { getUser } from '../../server/api';
 
 export default class UserStore {
   @observable isTyping = false;
-  @observable isActive = false;
+  @observable isActive = true;
 
   constructor(id) {
     this.id = id;
