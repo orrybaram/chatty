@@ -4,6 +4,7 @@ import ChatWindow from './ChatWindow';
 import UserStore from '../../shared/stores/UserStore';
 import MessageStore from '../../shared/stores/MessageStore';
 import ChatWindowStore from '../../shared/stores/ChatWindowStore';
+import DevTools from 'mobx-react-devtools';
 import '../styles/index.css';
 
 const propTypes = {
@@ -24,6 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
+        <DevTools />
         <ChatWindow
           chatStore={this.chatOne}
         />

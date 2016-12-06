@@ -1,4 +1,5 @@
 import Users from './data/Users';
+import Chats from './data/Chats';
 
 export const getUser = id => Users.filter(({ id: userId }) => id === userId)[0];
 
@@ -34,3 +35,8 @@ export const saveChatMessages = ({ id, messages }) => {
   localStorage.setItem('ChatMessages', JSON.stringify(messageStorage));
   return { status: 200 };
 };
+
+// Adds a default chat
+if (!getChatMessages().length) {
+  localStorage.setItem('ChatMessages', JSON.stringify(Chats));
+}

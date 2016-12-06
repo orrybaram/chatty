@@ -16,9 +16,8 @@ const ChatHeader = ({ recipients }) => (
           { 'header__recipient__activity-monitor--active': user.isActive }
         ]);
         return (
-          <div className='chat-window__header__recipients__recipient'>
+          <div key={shortId.generate()} className='chat-window__header__recipients__recipient'>
             <div
-              key={shortId.generate()}
               className='header__recipient__avatar'
               style={{ backgroundImage: `url(${user.avatarUrl})` }}
             />
