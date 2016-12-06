@@ -17,17 +17,12 @@ class ChatMessages extends Component {
     this.isScrolledToBottom = false;
   }
   componentDidMount() {
-    // Kind of a hack, the dom isn't fully painted when this is called
     setTimeout(() => {
       this.scrollToBottom();
     }, 250);
   }
   componentWillUpdate() {
-    this.isScrolledToBottom = (
-      this.messagesWindow.scrollTop === (
-        this.messagesWindow.scrollHeight - this.messagesWindow.offsetHeight
-      )
-    );
+    this.isScrolledToBottom = this.messagesWindow.scrollTop === (this.messagesWindow.scrollHeight - this.messagesWindow.offsetHeight);
   }
   componentDidUpdate() {
     if (this.isScrolledToBottom) {
