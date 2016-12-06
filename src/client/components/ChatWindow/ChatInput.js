@@ -26,7 +26,9 @@ const ChatInput = ({ sendMessage, updateInput, inputValue }) => {
         value={inputValue} placeholder='Your message'
         onChange={updateInput}
       />
-      <button className={sendButtonClass}><i className='fa fa-paper-plane' /></button>
+      <button className={sendButtonClass} tabIndex='-1'>
+        <i className='fa fa-paper-plane' />
+      </button>
     </form>
   );
 };
