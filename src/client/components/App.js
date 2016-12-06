@@ -24,10 +24,10 @@ class App extends Component {
     return (
       <div className='app'>
         <ChatWindow
-          chatStore={this.chatOne}
+          chatStore={this.chatTwo}
         />
         <ChatWindow
-          chatStore={this.chatTwo}
+          chatStore={this.chatOne}
         />
       </div>
     );

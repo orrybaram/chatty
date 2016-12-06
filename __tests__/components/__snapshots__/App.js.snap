@@ -13,101 +13,6 @@ exports[`App renders correctly 1`] = `
             className="header__recipient__avatar"
             style={
               Object {
-                "backgroundImage": "url(http://www.famousbirthdays.com/thumbnails/prepon-laura-large.jpg)",
-              }
-            } />
-          <div
-            className="header__recipient__name">
-            Laura
-          </div>
-          <div
-            className="header__recipient__activity-monitor header__recipient__activity-monitor--active" />
-        </div>
-      </div>
-    </div>
-    <div
-      className="chat-window__messages">
-      <div>
-        <div
-          className="chat-window__messages__message">
-          <div
-            className="chat-window__messages__message-wrapper">
-            <div
-              className="chat-window__messages__message__body">
-              Hi I\'m Laura how can I help you?
-            </div>
-            <div
-              className="chat-window__messages__message__date">
-              3 hours ago
-            </div>
-          </div>
-        </div>
-        <div
-          className="chat-window__messages__message chat-window__messages__message--user">
-          <div
-            className="chat-window__messages__message-wrapper">
-            <div
-              className="chat-window__messages__message__body">
-              I think i broke my computer what do I do?
-            </div>
-            <div
-              className="chat-window__messages__message__date">
-              2 hours ago
-            </div>
-          </div>
-        </div>
-        <div
-          className="chat-window__messages__message">
-          <div
-            className="chat-window__messages__message-wrapper">
-            <div
-              className="chat-window__messages__message__body">
-              ¯\\_(ツ)_/¯ 
-            </div>
-            <div
-              className="chat-window__messages__message__date">
-              2 hours ago
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="chat-window__typing-indicators">
-        <div
-          className="typing-indicator">
-          Laura
-           is typing
-        </div>
-      </div>
-    </div>
-    <form
-      className="chat-window__input-form"
-      onSubmit={[Function]}>
-      <input
-        className="chat-window__input-form__input"
-        onChange={[Function]}
-        placeholder="Your message"
-        value="" />
-      <button
-        className="chat-window__input-form__send-button"
-        tabIndex="-1">
-        <i
-          className="fa fa-paper-plane" />
-      </button>
-    </form>
-  </div>
-  <div
-    className="chat-window">
-    <div
-      className="chat-window__header">
-      <div
-        className="chat-window__header__recipients">
-        <div
-          className="chat-window__header__recipients__recipient">
-          <div
-            className="header__recipient__avatar"
-            style={
-              Object {
                 "backgroundImage": "url(https://pbs.twimg.com/profile_images/434822125396848640/WXyKtdMG.jpeg)",
               }
             } />
@@ -147,7 +52,7 @@ exports[`App renders correctly 1`] = `
             </div>
             <div
               className="chat-window__messages__message__date">
-              2 hours ago
+              3 hours ago
             </div>
           </div>
         </div>
@@ -161,7 +66,7 @@ exports[`App renders correctly 1`] = `
             </div>
             <div
               className="chat-window__messages__message__date">
-              2 hours ago
+              3 hours ago
             </div>
           </div>
         </div>
@@ -171,6 +76,101 @@ exports[`App renders correctly 1`] = `
         <div
           className="typing-indicator">
           Rob
+           is typing
+        </div>
+      </div>
+    </div>
+    <form
+      className="chat-window__input-form"
+      onSubmit={[Function]}>
+      <input
+        className="chat-window__input-form__input"
+        onChange={[Function]}
+        placeholder="Your message"
+        value="" />
+      <button
+        className="chat-window__input-form__send-button"
+        tabIndex="-1">
+        <i
+          className="fa fa-paper-plane" />
+      </button>
+    </form>
+  </div>
+  <div
+    className="chat-window">
+    <div
+      className="chat-window__header">
+      <div
+        className="chat-window__header__recipients">
+        <div
+          className="chat-window__header__recipients__recipient">
+          <div
+            className="header__recipient__avatar"
+            style={
+              Object {
+                "backgroundImage": "url(http://www.famousbirthdays.com/thumbnails/prepon-laura-large.jpg)",
+              }
+            } />
+          <div
+            className="header__recipient__name">
+            Laura
+          </div>
+          <div
+            className="header__recipient__activity-monitor header__recipient__activity-monitor--active" />
+        </div>
+      </div>
+    </div>
+    <div
+      className="chat-window__messages">
+      <div>
+        <div
+          className="chat-window__messages__message">
+          <div
+            className="chat-window__messages__message-wrapper">
+            <div
+              className="chat-window__messages__message__body">
+              Hi I\'m Laura how can I help you?
+            </div>
+            <div
+              className="chat-window__messages__message__date">
+              3 hours ago
+            </div>
+          </div>
+        </div>
+        <div
+          className="chat-window__messages__message chat-window__messages__message--user">
+          <div
+            className="chat-window__messages__message-wrapper">
+            <div
+              className="chat-window__messages__message__body">
+              I think i broke my computer what do I do?
+            </div>
+            <div
+              className="chat-window__messages__message__date">
+              3 hours ago
+            </div>
+          </div>
+        </div>
+        <div
+          className="chat-window__messages__message">
+          <div
+            className="chat-window__messages__message-wrapper">
+            <div
+              className="chat-window__messages__message__body">
+              ¯\\_(ツ)_/¯ 
+            </div>
+            <div
+              className="chat-window__messages__message__date">
+              3 hours ago
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="chat-window__typing-indicators">
+        <div
+          className="typing-indicator">
+          Laura
            is typing
         </div>
       </div>

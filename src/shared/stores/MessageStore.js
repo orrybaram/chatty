@@ -1,5 +1,5 @@
 import {observable, action} from 'mobx';
-import { getChatMessagesById, saveChatMessages } from '../../server/api';
+import { getChatMessagesById, saveChatMessages} from '../../server/api';
 
 export default class MessageStore {
   @observable messages = [];
