@@ -23,7 +23,11 @@ class ChatMessages extends Component {
     }, 250);
   }
   componentWillUpdate() {
-    this.isScrolledToBottom = this.messagesWindow.scrollTop === (this.messagesWindow.scrollHeight - this.messagesWindow.offsetHeight);
+    this.isScrolledToBottom = (
+      this.messagesWindow.scrollTop === (
+        this.messagesWindow.scrollHeight - this.messagesWindow.offsetHeight
+      )
+    );
   }
   componentDidUpdate() {
     if (this.isScrolledToBottom) {
