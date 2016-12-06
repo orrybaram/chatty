@@ -27,50 +27,7 @@ exports[`App renders correctly 1`] = `
     </div>
     <div
       className="chat-window__messages">
-      <div>
-        <div
-          className="chat-window__messages__message chat-window__messages__message--user">
-          <div
-            className="chat-window__messages__message-wrapper">
-            <div
-              className="chat-window__messages__message__body">
-              Hi I\'m Laura how can I help you?
-            </div>
-            <div
-              className="chat-window__messages__message__date">
-              3 hours ago
-            </div>
-          </div>
-        </div>
-        <div
-          className="chat-window__messages__message">
-          <div
-            className="chat-window__messages__message-wrapper">
-            <div
-              className="chat-window__messages__message__body">
-              I think i broke my computer what do I do?
-            </div>
-            <div
-              className="chat-window__messages__message__date">
-              3 hours ago
-            </div>
-          </div>
-        </div>
-        <div
-          className="chat-window__messages__message chat-window__messages__message--user">
-          <div
-            className="chat-window__messages__message-wrapper">
-            <div
-              className="chat-window__messages__message__body">
-              ¯\\_(ツ)_/¯ 
-            </div>
-            <div
-              className="chat-window__messages__message__date">
-              3 hours ago
-            </div>
-          </div>
-        </div>
-      </div>
+      <div />
       <div
         className="chat-window__typing-indicators">
         <div
@@ -122,50 +79,7 @@ exports[`App renders correctly 1`] = `
     </div>
     <div
       className="chat-window__messages">
-      <div>
-        <div
-          className="chat-window__messages__message">
-          <div
-            className="chat-window__messages__message-wrapper">
-            <div
-              className="chat-window__messages__message__body">
-              Hi I\'m Laura how can I help you?
-            </div>
-            <div
-              className="chat-window__messages__message__date">
-              3 hours ago
-            </div>
-          </div>
-        </div>
-        <div
-          className="chat-window__messages__message chat-window__messages__message--user">
-          <div
-            className="chat-window__messages__message-wrapper">
-            <div
-              className="chat-window__messages__message__body">
-              I think i broke my computer what do I do?
-            </div>
-            <div
-              className="chat-window__messages__message__date">
-              3 hours ago
-            </div>
-          </div>
-        </div>
-        <div
-          className="chat-window__messages__message">
-          <div
-            className="chat-window__messages__message-wrapper">
-            <div
-              className="chat-window__messages__message__body">
-              ¯\\_(ツ)_/¯ 
-            </div>
-            <div
-              className="chat-window__messages__message__date">
-              3 hours ago
-            </div>
-          </div>
-        </div>
-      </div>
+      <div />
       <div
         className="chat-window__typing-indicators">
         <div
