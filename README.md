@@ -7,6 +7,7 @@ A simple split-pane chat interface for mocking a conversation between users.
 git clone git@github.com:orrybaram/chatty
 cd chatty
 npm i
+# Grab some coffee
 npm start
 open http://localhost:3000
 ```
