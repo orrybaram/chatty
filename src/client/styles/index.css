@@ -122,6 +122,12 @@ body {
   clear: both;
 }
 
+.chat-window__messages__no-messages {
+  padding: 50px;
+  color: #ccc7d4;
+  font-size: 16px;
+}
+
 .chat-window__input-form {
   position: absolute;
   bottom: 0;

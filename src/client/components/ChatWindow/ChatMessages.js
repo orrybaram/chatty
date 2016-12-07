@@ -42,7 +42,7 @@ class ChatMessages extends Component {
   }
   render() {
     const { messages, recipients, user } = this.props;
-    const messageEls = messages.map((msg) => {
+    let messageEls = messages.map((msg) => {
       const isUser = user.id === msg.sentBy.id;
       return (
         <ChatMessage
@@ -53,6 +53,15 @@ class ChatMessages extends Component {
         />
       );
     });
+
+    if (!messageEls.length) {
+      messageEls = (
+        <div className='chat-window__messages__no-messages'>
+          This is the beginning of your conversation with&nbsp;
+          {recipients.map(_user => _user.name).join(',') }
+        </div>
+      );
+    }
 
     return (
       <div className='chat-window__messages' ref={(ref) => { this.messagesWindow = ref; }}>

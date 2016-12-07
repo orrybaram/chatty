@@ -27,7 +27,13 @@ exports[`App renders correctly 1`] = `
     </div>
     <div
       className="chat-window__messages">
-      <div />
+      <div>
+        <div
+          className="chat-window__messages__no-messages">
+          This is the beginning of your conversation with 
+          Rob
+        </div>
+      </div>
       <div
         className="chat-window__typing-indicators">
         <div
@@ -79,7 +85,13 @@ exports[`App renders correctly 1`] = `
     </div>
     <div
       className="chat-window__messages">
-      <div />
+      <div>
+        <div
+          className="chat-window__messages__no-messages">
+          This is the beginning of your conversation with 
+          Laura
+        </div>
+      </div>
       <div
         className="chat-window__typing-indicators">
         <div
