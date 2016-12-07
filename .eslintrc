@@ -1,0 +1,25 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "comma-dangle": [2, "never"],
+    "no-underscore-dangle": [0],
+    "jsx-quotes": [2, "prefer-single"],
+
+    "jsx-a11y/label-has-for": [0],
+
+    "react/require-extension": [0],
+    "react/jsx-filename-extension": [0],
+    "react/no-direct-mutation-state": 2,
+    "react/jsx-boolean-value": [2, "always"],
+    "react/jsx-no-duplicate-props": 2
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "describe": true,
+    "expect": true,
+    "it": true,
+    "beforeAll": true
+  }
+}
